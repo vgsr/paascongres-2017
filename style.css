@@ -1,0 +1,38 @@
+/**
+ * Theme Name:       Paascongres 2017
+ * Description:      Thema voor de organisatie van het Paascongres 2017
+ * Theme URI:        https://github.com/vgsr/paascongres-2017
+ * Version:          1.0.0
+ * Author:           MMC
+ * Author URI:       mmc@vgsr.nl
+ * Template:         twentyfifteen
+ * Text Domain:      paascongres-2017
+ * GitHub Theme URI: vgsr/paascongres-2017
+ */
+
+/**
+ * Limit sidebar width when .sidebar width >= 413px
+ */
+
+@media screen and (min-width: 1420px) {
+	body:before {
+		width: 413px;
+	}
+
+	.site {
+		max-width: none;
+	}
+
+	.site-content {
+		margin-left: 413px;
+		width: -webkit-calc( 100% - 413px );
+		width: calc( 100% - 413px );
+	}
+
+	.site-footer {
+		margin-left: calc( 413px + 6.05% );
+		width: -webkit-calc( 87.9% - 413px );
+		width: calc( 87.9% - 413px );
+	}
+}
+
