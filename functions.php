@@ -59,7 +59,7 @@ add_filter( 'show_admin_bar', 'paco2017_show_admin_bar' );
  *
  * @uses vgsr()
  */
-function paco2017_print_vgsr_logo() {
+function paco2017_vgsr_branding() {
 
 	// Bail when VGSR plugin is not active
 	if ( ! function_exists( 'vgsr' ) )
@@ -70,7 +70,7 @@ function paco2017_print_vgsr_logo() {
 	<style id="site-header-vgsr-logo">
 		.site-header:before {
 			content: '';
-			background-image: url('<?php echo $images_url . 'logo.png'; ?>');
+			background-image: url('<?php echo $images_url . 'logo-wit.png'; ?>');
 			position: absolute;
 			-webkit-background-size: 42px;
 			background-size: 42px;
@@ -146,4 +146,4 @@ function paco2017_print_vgsr_logo() {
 
 	<?php
 }
-add_action( 'wp_head', 'paco2017_print_vgsr_logo' );
+add_action( 'wp_head', 'paco2017_vgsr_branding' );
