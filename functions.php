@@ -11,6 +11,16 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Setup requirements for the theme
+ *
+ * @since 1.1.0
+ */
+function paco2017_setup_theme() {
+
+}
+add_action( 'after_setup_theme', 'paco2017_setup_theme' );
+
+/**
  * Enqueue the theme's scripts
  *
  * @since 1.0.0
@@ -147,3 +157,18 @@ function paco2017_vgsr_branding() {
 	<?php
 }
 add_action( 'wp_head', 'paco2017_vgsr_branding' );
+
+/**
+ * Register widgets
+ *
+ * @since 1.1.0
+ */
+function paco2017_register_widgets() {
+
+	// Require files
+	require_once( get_stylesheet_directory() . '/widgets/class-paco2017-login-widget.php' );
+
+	// Register widgets
+	register_widget( 'PaCo2017_Login_Widget' );
+}
+add_action( 'widgets_init', 'paco2017_register_widgets' );
