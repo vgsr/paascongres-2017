@@ -21,20 +21,70 @@ function paco2017_setup_theme() {
 add_action( 'after_setup_theme', 'paco2017_setup_theme' );
 
 /**
+ * Register Google Fonts for this theme
+ *
+ * @since 1.1.0
+ *
+ * @return string Fonts url
+ */
+function paco2017_fonts_url() {
+	$fonts_url = '';
+	$fonts     = array();
+	$subsets   = 'latin,latin-ext';
+
+	/*
+	 * Translators: If there are characters in your language that are not supported
+	 * by Flamenco, translate this to 'off'. Do not translate into your own language.
+	 */
+	if ( 'off' !== _x( 'on', 'Noto Sans font: on or off', 'zeta' ) ) {
+		$fonts[] = 'Flamenco:300,400';
+	}
+
+	/*
+	 * Translators: To add an additional character subset specific to your language,
+	 * translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
+	 */
+	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'zeta' );
+
+	if ( 'cyrillic' == $subset ) {
+		$subsets .= ',cyrillic,cyrillic-ext';
+	} elseif ( 'greek' == $subset ) {
+		$subsets .= ',greek,greek-ext';
+	} elseif ( 'devanagari' == $subset ) {
+		$subsets .= ',devanagari';
+	} elseif ( 'vietnamese' == $subset ) {
+		$subsets .= ',vietnamese';
+	}
+
+	if ( $fonts ) {
+		$fonts_url = add_query_arg( array(
+			'family' => urlencode( implode( '|', $fonts ) ),
+			'subset' => urlencode( $subsets ),
+		), '//fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+}
+
+/**
  * Enqueue the theme's scripts
  *
  * @since 1.0.0
  *
+ * @uses wp_register_style()
  * @uses wp_enqueue_style()
  * @uses get_template_directory_uri()
  */
 function paco2017_enqueue_scripts() {
 
 	// Load parent theme's stylesheet
-	wp_register_style( 'twentyfifteen', get_template_directory_uri() . '/style.css' );
+	wp_register_style( 'twentyfifteen-style', get_template_directory_uri() . '/style.css' );
 
 	// Load child theme's stylesheet with dependence
-	wp_enqueue_style( 'paascongres-2017', get_stylesheet_uri(), array( 'twentyfifteen' ) );
+	wp_enqueue_style( 'paascongres-2017', get_stylesheet_uri(), array( 'twentyfifteen-style' ) );
+
+	// Add custom fonts
+	wp_enqueue_style( 'paascongres-2017-fonts', paco2017_fonts_url(), array( 'paascongres-2017' ) );
 }
 add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts' );
 

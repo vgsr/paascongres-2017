@@ -10,10 +10,22 @@
  * GitHub Theme URI: vgsr/paascongres-2017
  */
 
+h1, h2, h3, h4, h5, h6,
+.post-naviagtion .post-title,
+.widget_calendar caption,
+.page-title,
+.comments-title, .comment-reply-title {
+	font-family: Flamenco, 'Noto Serif', serif;
+}
+
+.site-title {
+	font-family: Flamenco, 'Noto Sans', serif;
+	letter-spacing: 1px;
+}
+
 /**
  * Limit sidebar width when .sidebar width >= 413px
  */
-
 @media screen and (min-width: 1420px) {
 	body:before {
 		width: 413px;
