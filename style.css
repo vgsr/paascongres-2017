@@ -163,6 +163,6 @@ body:before, .site-header {
 
 .rpt_style_basic .rpt_plan .rpt_features .rpt_feature img {
 	position: absolute;
-	top: calc( 50% - 12.5px );
+	/* top: calc( 50% - 12.5px ); */
 	left: 16px;
 }
