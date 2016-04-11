@@ -72,7 +72,7 @@ body:before, .site-header {
 .site-header:before {
 	content: '';
 	position: absolute;
-	background: url('images/wasted-main-tiny.png') no-repeat;
+	background: url('images/wasted-main-white-tiny.png') no-repeat;
 	background-position: -100px top;
 	-webkit-background-size: 236px;
 	background-size: 236px;
