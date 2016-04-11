@@ -151,3 +151,18 @@ body:before, .site-header {
 		padding-left: 0;
 	}
 }
+
+/**
+ * Plugin: Responsive Pricing Table
+ */
+.rpt_style_basic .rpt_plan .rpt_features .rpt_feature {
+	position: relative;
+	padding-left: 51px;
+	text-align: left;
+}
+
+.rpt_style_basic .rpt_plan .rpt_features .rpt_feature img {
+	position: absolute;
+	top: calc( 50% - 12.5px );
+	left: 16px;
+}
