@@ -17,8 +17,12 @@ defined( 'ABSPATH' ) || exit;
  */
 function paco2017_setup_theme() {
 
+	// This theme uses wp_nav_menu() in multiple locations.
+	register_nav_menus( array(
+		'magazine' => __( 'Magazine Menu', 'paascongres-2017' ),
+	) );
 }
-add_action( 'after_setup_theme', 'paco2017_setup_theme' );
+add_action( 'after_setup_theme', 'paco2017_setup_theme', 15 ); // After parent theme
 
 /**
  * Register Google Fonts for this theme
@@ -83,7 +87,7 @@ function paco2017_enqueue_scripts() {
 	// Add custom fonts
 	wp_enqueue_style( 'paascongres-2017-fonts', paco2017_fonts_url(), array( 'twentyseventeen-style' ) );
 }
-add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts', 8 );
 
 /**
  * Return whether to show the admin bar
@@ -120,3 +124,8 @@ function paco2017_register_widgets() {
 	register_widget( 'PaCo2017_Login_Widget' );
 }
 add_action( 'widgets_init', 'paco2017_register_widgets' );
+
+/**
+ * Implement the Magazine template feature.
+ */
+require get_theme_file_path( '/inc/magazine.php' );

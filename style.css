@@ -10,6 +10,19 @@
  * GitHub Theme URI: vgsr/paascongres-2017
  */
 
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Typography
+2.0 Site Branding
+3.0 Templates
+9.0 Plugins
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Typography
+--------------------------------------------------------------*/
+
 h1, h2,
 .post-navigation .post-title,
 .site-title,
@@ -29,9 +42,19 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	letter-spacing: 0.08em;
 }
 
-/**
- * Branding
- */
+@media screen and (min-width: 48em) {
+
+	h2.widget-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+		letter-spacing: 0.08em;
+	}
+}
+
+/*--------------------------------------------------------------
+2.0 Site Branding
+--------------------------------------------------------------*/
+
 .site-branding-text {
 	position: relative;
 	padding-left: 64px;
@@ -61,9 +84,72 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	}
 }
 
-/**
- * Plugin: Responsive Pricing Table
- */
+/*--------------------------------------------------------------
+3.0 Templates: Magazine
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 48em) {
+	.page-template-magazine .custom-header {
+		height: calc( 100vh );
+		padding-bottom: 53.4px;
+	}
+
+	.admin-bar.page-template-magazine .custom-header {
+		height: calc( 100vh - 46px );
+	}
+
+	/* Main Navigation */
+
+	.page-template-magazine .navigation-top {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 5;
+	}
+}
+
+@media screen and (min-width: 48em) {
+
+	/* Main Navigation */
+
+	.page-template-magazine .main-navigation .menu-item-has-children > a > .icon,
+	.page-template-magazine .main-navigation .page_item_has_children > a > .icon {
+		-ms-transform: rotate(180deg); /* IE 9 */
+		-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+		transform: rotate(180deg);
+	}
+
+	.page-template-magazine .main-navigation ul ul {
+		top: auto;
+		bottom: 100%;
+	}
+
+	.page-template-magazine .main-navigation ul li.menu-item-has-children:before,
+	.page-template-magazine .main-navigation ul li.menu-item-has-children:after,
+	.page-template-magazine .main-navigation ul li.page_item_has_children:before,
+	.page-template-magazine .main-navigation ul li.page_item_has_children:after {
+		border-width: 6px 6px 0;
+		bottom: auto;
+		top: -1px;
+	}
+
+	.page-template-magazine .main-navigation ul li.menu-item-has-children:before,
+	.page-template-magazine .main-navigation ul li.page_item_has_children:before {
+		border-color: #bbb transparent transparent;
+		bottom: auto;
+		top: 0;
+	}
+
+	.page-template-magazine .main-navigation ul li.menu-item-has-children:after,
+	.page-template-magazine .main-navigation ul li.page_item_has_children:after {
+		border-color: #fff transparent transparent;
+	}
+}
+
+/*--------------------------------------------------------------
+9.0 Plugins
+--------------------------------------------------------------*/
+
 .rpt_plans.rpt_style_basic .rpt_plan .rpt_features .rpt_feature {
 	position: relative;
 	padding-left: 51px;
@@ -74,15 +160,4 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	position: absolute;
 	/* top: calc( 50% - 12.5px ); */
 	left: 16px;
-}
-
-/* Widgets */
-
-@media screen and (min-width: 48em) {
-	/* Reset font-size for Flamenco */
-	h2.widget-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-		letter-spacing: 0.08em;
-	}
 }
