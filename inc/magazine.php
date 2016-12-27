@@ -65,7 +65,12 @@ function paco2017_magazine_has_nav_menu( $has_nav_menu, $location ) {
 	// Consider the Top menu in the Magazine template present when
 	// the `magazine` menu location has a nav menu.
 	if ( 'top' === $location && paco2017_is_magazine_template() ) {
-		$has_nav_menu = has_nav_menu( 'magazine' );
+
+		// Only use Magazine menu when it is assigned. This enables
+		// fallback to the default `top` menu.
+		if ( has_nav_menu( 'magazine' ) ) {
+			$has_nav_menu = true;
+		}
 	}
 
 	return $has_nav_menu;
