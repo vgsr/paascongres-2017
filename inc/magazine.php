@@ -102,3 +102,14 @@ function paco2017_magazine_dropdown_icon_to_menu_link( $title, $item, $args, $de
 	return $title;
 }
 add_filter( 'nav_menu_item_title', 'paco2017_magazine_dropdown_icon_to_menu_link', 10, 4 );
+
+/**
+ * Return the main magazine destination url
+ *
+ * @since 1.2.0
+ *
+ * @return string Main magazine url
+ */
+function paco2017_magazine_url() {
+	return apply_filters( 'paco2017_magazine_url', home_url( '/' ) );
+}
