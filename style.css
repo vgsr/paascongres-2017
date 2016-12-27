@@ -112,8 +112,8 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 	/* Main Navigation */
 
-	.page-template-magazine .main-navigation .menu-item-has-children > a > .icon,
-	.page-template-magazine .main-navigation .page_item_has_children > a > .icon {
+	.page-template-magazine .main-navigation .menu > .menu-item-has-children > a > .icon,
+	.page-template-magazine .main-navigation .menu > .page_item_has_children > a > .icon {
 		-ms-transform: rotate(180deg); /* IE 9 */
 		-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
 		transform: rotate(180deg);
