@@ -77,14 +77,11 @@ function paco2017_fonts_url() {
  */
 function paco2017_enqueue_scripts() {
 
-	// Load parent theme's stylesheet
-	wp_register_style( 'twentyfifteen-style', get_template_directory_uri() . '/style.css' );
-
-	// Load child theme's stylesheet with dependence
-	wp_enqueue_style( 'paascongres-2017', get_stylesheet_uri(), array( 'twentyfifteen-style' ) );
+	// Add parent theme's stylesheet. Twentyseventeen enqueues the child theme for us.
+	wp_enqueue_style( 'twentyseventeen-parent-style', get_template_directory_uri() . '/style.css' );
 
 	// Add custom fonts
-	wp_enqueue_style( 'paascongres-2017-fonts', paco2017_fonts_url(), array( 'paascongres-2017' ) );
+	wp_enqueue_style( 'paascongres-2017-fonts', paco2017_fonts_url(), array( 'twentyseventeen-style' ) );
 }
 add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts' );
 
