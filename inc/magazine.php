@@ -52,6 +52,36 @@ function paco2017_magazine_body_classes( $classes ) {
 add_filter( 'body_class', 'paco2017_magazine_body_classes' );
 
 /**
+ * Modify the header image tag for the Magazine template
+ *
+ * @since 1.2.0
+ *
+ * @param string $html   The HTML image tag markup being filtered.
+ * @param object $header The custom header object returned by 'get_custom_header()'.
+ * @param array  $attr   Array of the attributes for the image tag.
+ * @return string HTML imaget tag
+ */
+function paco2017_magazine_header_image( $html, $header, $attr ) {
+
+	// This is for the Magazine template and there's a featured image
+	if ( paco2017_is_magazine_template() && get_post_thumbnail_id() ) {
+
+		// We're not using the header image
+		unset( $attr['src'], $attr['srcset'] );
+
+		// Has this post a featured image?
+		$thumbnail = get_the_post_thumbnail( null, 'twentyseventeen-featured-image', $attr );
+
+		if ( $thumbnail ) {
+			$html = $thumbnail;
+		}
+	}
+
+	return $html;
+}
+add_filter( 'get_header_image_tag', 'paco2017_magazine_header_image', 5, 3 );
+
+/**
  * Modify whether the queried menu location has a nav menu
  *
  * @since 1.2.0
