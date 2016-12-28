@@ -59,7 +59,7 @@ add_filter( 'body_class', 'paco2017_magazine_body_classes' );
  * @param string $html   The HTML image tag markup being filtered.
  * @param object $header The custom header object returned by 'get_custom_header()'.
  * @param array  $attr   Array of the attributes for the image tag.
- * @return string HTML imaget tag
+ * @return string HTML image tag
  */
 function paco2017_magazine_header_image( $html, $header, $attr ) {
 
@@ -80,6 +80,25 @@ function paco2017_magazine_header_image( $html, $header, $attr ) {
 	return $html;
 }
 add_filter( 'get_header_image_tag', 'paco2017_magazine_header_image', 5, 3 );
+
+/**
+ * Wrap the header image tag for the Magazine template in a link
+ *
+ * @since 1.2.0
+ *
+ * @param string $html The HTML image tag markup being filtered.
+ * @return string HTML image tag
+ */
+function paco2017_magazine_wrap_header_image_in_link( $html ) {
+
+	// This is for the Magazine template and there's a download url
+	if ( paco2017_is_magazine_template() && paco2017_magazine_url_is_not_home() ) {
+		$html = sprintf( '<a href="%s">%s</a>', paco2017_magazine_url(), $html );
+	}
+
+	return $html;
+}
+add_filter( 'get_header_image_tag', 'paco2017_magazine_wrap_header_image_in_link', 99 );
 
 /**
  * Modify whether the queried menu location has a nav menu
@@ -132,6 +151,17 @@ function paco2017_magazine_dropdown_icon_to_menu_link( $title, $item, $args, $de
 	return $title;
 }
 add_filter( 'nav_menu_item_title', 'paco2017_magazine_dropdown_icon_to_menu_link', 10, 4 );
+
+/**
+ * Return whether the magazine url points not to home
+ *
+ * @since 1.2.0
+ *
+ * @return bool Magazine url points not to home?
+ */
+function paco2017_magazine_url_is_not_home() {
+	return ( home_url( '/' ) !== paco2017_magazine_url() );
+}
 
 /**
  * Return the main magazine destination url
