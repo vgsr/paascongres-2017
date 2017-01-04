@@ -86,6 +86,11 @@ function paco2017_enqueue_scripts() {
 
 	// Add custom fonts
 	wp_enqueue_style( 'paascongres-2017-fonts', paco2017_fonts_url(), array( 'twentyseventeen-style' ) );
+
+	// Load the BuddyPress specific stylesheet
+	if ( function_exists( 'is_buddypress' ) && is_buddypress() ) {
+		wp_enqueue_style( 'paascongres-2017-buddypress', get_theme_file_uri( '/assets/css/paco2017-buddypress.css' ), array( 'twentyseventeen-style', 'bp-twentyseventeen' ) );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts', 8 );
 
@@ -129,3 +134,8 @@ add_action( 'widgets_init', 'paco2017_register_widgets' );
  * Implement the Magazine template feature.
  */
 require get_theme_file_path( '/inc/magazine.php' );
+
+/**
+ * Implement the BuddyPress modifications.
+ */
+require get_theme_file_path( '/inc/buddypress.php' );

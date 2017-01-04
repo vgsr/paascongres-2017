@@ -1,0 +1,96 @@
+/**
+ * Paascongres 2017: BuddyPress Styles
+ */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 General
+2.0 Members
+   2.1 Profile
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 General
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+2.0 Members
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+2.1 Members: Profile
+--------------------------------------------------------------*/
+
+#main #buddypress .standard-form .editfield {
+	position: relative;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #eee;
+}
+
+#main #buddypress .standard-form .editfield:before {
+	content: '';
+	position: absolute;
+	left: 25%;
+	height: 100%;
+	border-left: 1px solid #eaeaea;
+}
+
+#main #buddypress .standard-form .editfield.alt {
+	background: #f5f5f5;
+	color: #707070;
+}
+
+#main #buddypress .standard-form .editfield.alt label {
+	color: #707070;
+}
+
+#main #buddypress .standard-form .editfield > label,
+#main #buddypress .standard-form .editfield legend {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	margin: 0;
+	padding: 8px;
+}
+
+#main #buddypress .standard-form .editfield fieldset {
+	margin: 0;
+}
+
+#main #buddypress .standard-form .editfield > label ~ *,
+#main #buddypress .standard-form .editfield > span.label ~ *,
+#main #buddypress .standard-form .editfield legend ~ *,
+#main #buddypress .standard-form .editfield fieldset ~ * {
+	float: right;
+	width: calc( 75% - 16px );
+	margin: 8px;
+}
+
+#main #buddypress .standard-form .editfield select {
+	padding: 6px;
+}
+
+#main #buddypress p.description:empty {
+	display: none;
+}
+
+.bp-user #buddypress .standard-form .editfield {
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+@media screen and (min-width: 55em) {
+	.bp-user #buddypress .standard-form .editfield {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+}
+
+@media screen and (min-width: 67em) {
+	.bp-user #buddypress .standard-form .editfield {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
