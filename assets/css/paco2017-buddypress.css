@@ -56,6 +56,20 @@
 	padding: 8px;
 }
 
+.bp-user #buddypress .standard-form .editfield .bp-required-field-label {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+.bp-user #buddypress .standard-form .required-field > label:after,
+.bp-user #buddypress .standard-form .required-field > span.label:after,
+.bp-user #buddypress .standard-form .required-field legend:after {
+	content: '*';
+}
+
 .bp-user #buddypress .standard-form .editfield fieldset {
 	margin: 0;
 }
