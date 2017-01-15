@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Displays header site branding for the Magazine template
+ * Displays header site branding for the Above The Fold template
  *
  * @package Paascongres 2017
  * @subpackage Theme
@@ -15,7 +15,7 @@
 		<?php the_custom_logo(); ?>
 
 		<div class="site-branding-text">
-			<p class="site-title"><a href="<?php echo esc_url( paco2017_magazine_url() ); ?>" rel="home"><?php the_title(); ?></a></p>
+			<p class="site-title"><a href="<?php echo esc_url( paco2017_get_atf_url() ); ?>"><?php the_title(); ?></a></p>
 
 			<?php $description = get_the_content();
 				if ( $description || is_customize_preview() ) : ?>

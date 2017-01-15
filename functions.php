@@ -19,7 +19,7 @@ function paco2017_setup_theme() {
 
 	// This theme uses wp_nav_menu() in multiple locations.
 	register_nav_menus( array(
-		'magazine' => __( 'Magazine Menu', 'paascongres-2017' ),
+		'above-the-fold' => __( 'Above The Fold Menu', 'paascongres-2017' ),
 	) );
 }
 add_action( 'after_setup_theme', 'paco2017_setup_theme', 15 ); // After parent theme
@@ -131,9 +131,9 @@ function paco2017_register_widgets() {
 add_action( 'widgets_init', 'paco2017_register_widgets' );
 
 /**
- * Implement the Magazine template feature.
+ * Implement the Above The Fold template feature.
  */
-require get_theme_file_path( '/inc/magazine.php' );
+require get_theme_file_path( '/inc/above-the-fold.php' );
 
 /**
  * Implement the BuddyPress modifications.

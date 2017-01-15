@@ -55,22 +55,22 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-2.1 Templates: Magazine
+2.1 Templates: Above The Fold
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 48em) {
-	.page-template-magazine .custom-header {
+	.page-template-above-the-fold .custom-header {
 		height: calc( 100vh );
 		padding-bottom: 53.4px;
 	}
 
-	.admin-bar.page-template-magazine .custom-header {
+	.page-template-above-the-fold.admin-bar .custom-header {
 		height: calc( 100vh - 46px );
 	}
 
 	/* Main Navigation */
 
-	.page-template-magazine .navigation-top {
+	.page-template-above-the-fold .navigation-top {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
@@ -82,43 +82,43 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 	/* Main Navigation */
 
-	.page-template-magazine .main-navigation .menu > .menu-item-has-children > a > .icon,
-	.page-template-magazine .main-navigation .menu > .page_item_has_children > a > .icon {
+	.page-template-above-the-fold .main-navigation .menu > .menu-item-has-children > a > .icon,
+	.page-template-above-the-fold .main-navigation .menu > .page_item_has_children > a > .icon {
 		-ms-transform: rotate(180deg); /* IE 9 */
 		-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
 		transform: rotate(180deg);
 	}
 
-	.page-template-magazine .main-navigation ul ul {
+	.page-template-above-the-fold .main-navigation ul ul {
 		top: auto;
 		bottom: 100%;
 	}
 
-	.page-template-magazine .main-navigation ul ul ul {
+	.page-template-above-the-fold .main-navigation ul ul ul {
 		top: auto;
 		bottom: 0;
 		margin-top: 0px;
 		margin-bottom: -1px;
 	}
 
-	.page-template-magazine .main-navigation ul li.menu-item-has-children:before,
-	.page-template-magazine .main-navigation ul li.menu-item-has-children:after,
-	.page-template-magazine .main-navigation ul li.page_item_has_children:before,
-	.page-template-magazine .main-navigation ul li.page_item_has_children:after {
+	.page-template-above-the-fold .main-navigation ul li.menu-item-has-children:before,
+	.page-template-above-the-fold .main-navigation ul li.menu-item-has-children:after,
+	.page-template-above-the-fold .main-navigation ul li.page_item_has_children:before,
+	.page-template-above-the-fold .main-navigation ul li.page_item_has_children:after {
 		border-width: 6px 6px 0;
 		bottom: auto;
 		top: -1px;
 	}
 
-	.page-template-magazine .main-navigation ul li.menu-item-has-children:before,
-	.page-template-magazine .main-navigation ul li.page_item_has_children:before {
+	.page-template-above-the-fold .main-navigation ul li.menu-item-has-children:before,
+	.page-template-above-the-fold .main-navigation ul li.page_item_has_children:before {
 		border-color: #bbb transparent transparent;
 		bottom: auto;
 		top: 0;
 	}
 
-	.page-template-magazine .main-navigation ul li.menu-item-has-children:after,
-	.page-template-magazine .main-navigation ul li.page_item_has_children:after {
+	.page-template-above-the-fold .main-navigation ul li.menu-item-has-children:after,
+	.page-template-above-the-fold .main-navigation ul li.page_item_has_children:after {
 		border-color: #fff transparent transparent;
 	}
 }

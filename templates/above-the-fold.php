@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Paascongres 2017 Magazine Page Template
+ * Paascongres 2017 Above The Fold Page Template
  *
  * This template contains only the front page's full screen media header
  * and has no page content section.
  *
- * Template Name: Paascongres Magazine
+ * Template Name: Paascongres Above The Fold
  *
  * @package Paascongres 2017
  * @subpackage Theme
@@ -28,12 +28,12 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php get_template_part( 'template-parts/header/header', 'magazine' ); ?>
+		<?php get_template_part( 'template-parts/header/header', 'above-the-fold' ); ?>
 
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<div class="navigation-top">
 				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'magazine' ); ?>
+					<?php get_template_part( 'template-parts/navigation/navigation', 'above-the-fold' ); ?>
 				</div><!-- .wrap -->
 			</div><!-- .navigation-top -->
 		<?php endif; ?>
