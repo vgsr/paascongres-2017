@@ -15,7 +15,7 @@
 		<?php the_custom_logo(); ?>
 
 		<div class="site-branding-text">
-			<p class="site-title"><a href="<?php echo esc_url( paco2017_get_atf_url() ); ?>"><?php the_title(); ?></a></p>
+			<h1 class="site-title"><?php the_title(); ?></h1>
 
 			<?php $description = get_the_content();
 				if ( $description || is_customize_preview() ) : ?>
