@@ -33,6 +33,10 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	font-weight: 800;
 }
 
+h4 {
+	font-weight: 600;
+}
+
 .page-title,
 .page .panel-content .entry-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
