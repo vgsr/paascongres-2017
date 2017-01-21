@@ -63,6 +63,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 48em) {
+	.has-header-image.page-template-above-the-fold .custom-header,
 	.page-template-above-the-fold .custom-header {
 		height: calc( 100vh );
 		padding-bottom: 53.4px;
