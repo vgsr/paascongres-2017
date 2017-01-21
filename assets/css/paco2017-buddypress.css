@@ -33,16 +33,16 @@
 	content: '';
 	position: absolute;
 	left: 25%;
-	height: 100%;
+	height: calc( 100% + 1px );
 	border-left: 1px solid #eaeaea;
 }
 
-.bp-user #buddypress .standard-form .editfield.alt {
+.bp-user:not(.colors-dark) #buddypress .standard-form .editfield.alt {
 	background: #f5f5f5;
 	color: #707070;
 }
 
-.bp-user #buddypress .standard-form .editfield.alt label {
+.bp-user:not(.colors-dark) #buddypress .standard-form .editfield.alt label {
 	color: #707070;
 }
 
@@ -108,4 +108,70 @@
 		font-size: 16px;
 		font-size: 1rem;
 	}
+}
+
+/*--------------------------------------------------------------
+3.0 Color Scheme: Dark (: missing in BP)
+--------------------------------------------------------------*/
+
+.colors-dark #buddypress ul.item-list,
+.colors-dark #buddypress ul.item-list li,
+.bp-user.colors-dark #buddypress .standard-form .editfield {
+	border-color: #333;
+}
+
+.colors-dark #buddypress .standard-form textarea,
+.colors-dark #buddypress .standard-form input[type=text],
+.colors-dark #buddypress .standard-form input[type=color],
+.colors-dark #buddypress .standard-form input[type=date],
+.colors-dark #buddypress .standard-form input[type=datetime],
+.colors-dark #buddypress .standard-form input[type=datetime-local],
+.colors-dark #buddypress .standard-form input[type=email],
+.colors-dark #buddypress .standard-form input[type=month],
+.colors-dark #buddypress .standard-form input[type=number],
+.colors-dark #buddypress .standard-form input[type=range],
+.colors-dark #buddypress .standard-form input[type=search],
+.colors-dark #buddypress .standard-form input[type=tel],
+.colors-dark #buddypress .standard-form input[type=time],
+.colors-dark #buddypress .standard-form input[type=url],
+.colors-dark #buddypress .standard-form input[type=week],
+.colors-dark #buddypress .standard-form select,
+.colors-dark #buddypress .standard-form input[type=password],
+.colors-dark #buddypress .dir-search input[type=search],
+.colors-dark #buddypress .dir-search input[type=text],
+.colors-dark #buddypress .groups-members-search input[type=search],
+.colors-dark #buddypress .groups-members-search input[type=text],
+.colors-dark #buddypress .standard-form input:focus,
+.colors-dark #buddypress .standard-form textarea:focus,
+.colors-dark #buddypress .standard-form select:focus {
+	background: #333;
+	border-color: #555;
+	color: #eee;
+}
+
+.colors-dark #buddypress .standard-form button,
+.colors-dark #buddypress a.button,
+.colors-dark #buddypress input[type=submit],
+.colors-dark #buddypress input[type=button],
+.colors-dark #buddypress input[type=reset],
+.colors-dark #buddypress ul.button-nav li a,
+.colors-dark #buddypress .generic-button a,
+.colors-dark #buddypress .comment-reply-link,
+.colors-dark a.bp-title-button {
+	background: #fff;
+	color: #222;
+}
+
+.colors-dark #buddypress .standard-form button:hover,
+.colors-dark #buddypress a.button:focus,
+.colors-dark #buddypress a.button:hover,
+.colors-dark #buddypress input[type=submit]:hover,
+.colors-dark #buddypress input[type=button]:hover,
+.colors-dark #buddypress input[type=reset]:hover,
+.colors-dark #buddypress ul.button-nav li a:hover,
+.colors-dark #buddypress ul.button-nav li.current a,
+.colors-dark #buddypress div.generic-button a:hover,
+.colors-dark #buddypress .comment-reply-link:hover {
+	background: #bbb;
+	color: #222;
 }
