@@ -89,11 +89,11 @@ function paco2017_enqueue_scripts() {
 
 	// Load the BuddyPress specific stylesheet
 	if ( function_exists( 'is_buddypress' ) && is_buddypress() ) {
-		if ( version_compare( bp_get_version(), '2.8-alpha', '<' ) ) {
-			wp_enqueue_style( 'bp-twentyseventeen', get_theme_file_uri( '/assets/css/bp-twentyseventeen.css' ), array( 'twentyseventeen-style' ) );
+		if ( version_compare( bp_get_version(), '2.7', '<=' ) ) {
+			wp_enqueue_style( 'bp-twentyseventeen', get_theme_file_uri( '/assets/css/bp-twentyseventeen.css' ), array( 'twentyseventeen-style', 'bp-legacy-css' ) );
 		}
 
-		wp_enqueue_style( 'paascongres-2017-buddypress', get_theme_file_uri( '/assets/css/paco2017-buddypress.css' ), array( 'twentyseventeen-style', 'bp-twentyseventeen' ) );
+		wp_enqueue_style( 'paascongres-2017-buddypress', get_theme_file_uri( '/assets/css/paco2017-buddypress.css' ), array( 'bp-twentyseventeen', 'bp-legacy-css' ) );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts', 8 );
