@@ -3,7 +3,7 @@
  * BuddyPress - Members Single Profile Edit
  *
  * Changes to the bp-default template:
- * - Removed single profile group edit limit: one page to edit them all
+ * - Removed single profile group edit limit: this is now one page to edit all profile groups
  * - Removed field visibility settings
  * - Added #profile-group-{group_id} and .bp-widget to the form
  *
@@ -78,7 +78,9 @@ if ( bp_has_profile() ) :
 
 </form>
 
-<?php endif; endwhile; endif; ?>
+<?php endif;
+	endwhile;
+endif; ?>
 
 <?php
 

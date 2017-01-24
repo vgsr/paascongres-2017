@@ -26,3 +26,40 @@ function paco2017_bp_get_the_profile_group_edit_form_action( $action ) {
 	return $action;
 }
 add_filter( 'bp_get_the_profile_group_edit_form_action', 'paco2017_bp_get_the_profile_group_edit_form_action' );
+
+/**
+ * Add markup to the page content header
+ *
+ * Puts the member header in the page content header.
+ *
+ * @since 1.0.0
+ */
+function paco2017_bp_page_content_header() {
+
+	// Single user
+	if ( bp_is_user() ) : ?>
+
+	<div id="buddypress"><!-- Cheat the system: another #buddypress! :o -->
+		<div id="item-header" role="complementary">
+
+			<?php bp_get_template_part( 'members/single/member-header' ); ?>
+
+		</div><!-- #item-header -->
+	</div>
+
+	<?php endif;
+}
+add_action( 'paco2017_page_content_header', 'paco2017_bp_page_content_header' );
+
+/**
+ * Add additional entry title after the member's avatar
+ *
+ * @since 1.0.0
+ */
+function paco2017_bp_page_entry_title() { ?>
+
+	<span class="entry-title"><?php the_title(); ?></span>
+
+	<?php
+}
+add_action( 'bp_before_member_header_meta', 'paco2017_bp_page_entry_title', 5 );

@@ -135,6 +135,17 @@ function paco2017_register_widgets() {
 add_action( 'widgets_init', 'paco2017_register_widgets' );
 
 /**
+ * Run dedicated hook for the page content header
+ *
+ * @since 1.0.0
+ *
+ * @uses do_action() Calls 'paco2017_page_content_header'
+ */
+function paco2017_page_content_header() {
+	do_action( 'paco2017_page_content_header' );
+}
+
+/**
  * Implement the Above The Fold template feature.
  */
 require get_theme_file_path( '/inc/above-the-fold.php' );
