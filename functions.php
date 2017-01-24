@@ -89,7 +89,7 @@ function paco2017_enqueue_scripts() {
 
 	// Load the BuddyPress specific stylesheet
 	if ( function_exists( 'is_buddypress' ) && is_buddypress() ) {
-		if ( version_compare( bp_get_version(), '2.7', '<=' ) ) {
+		if ( version_compare( bp_get_version(), '2.8.0', '<' ) ) {
 			wp_enqueue_style( 'bp-twentyseventeen', get_theme_file_uri( '/assets/css/bp-twentyseventeen.css' ), array( 'twentyseventeen-style', 'bp-legacy-css' ) );
 		}
 
