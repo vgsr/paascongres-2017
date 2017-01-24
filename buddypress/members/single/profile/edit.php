@@ -21,7 +21,7 @@ do_action( 'bp_before_profile_edit_content' );
 if ( bp_has_profile() ) :
 	while ( bp_profile_groups() ) : bp_the_profile_group(); ?>
 
-	<?php if ( bp_profile_group_has_fields() ) : ?>
+	<?php if ( paco2017_bp_profile_group_has_fields() ) : ?>
 
 <form id="profile-group-<?php bp_the_profile_group_id(); ?>" action="<?php bp_the_profile_group_edit_form_action(); ?>" method="post" id="profile-edit-form" class="standard-form bp-widget <?php bp_the_profile_group_slug(); ?>">
 
