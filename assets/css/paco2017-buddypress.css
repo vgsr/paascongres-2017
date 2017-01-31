@@ -28,6 +28,10 @@
 	}
 }
 
+#buddypress div#message p {
+	font-size: .75em;
+}
+
 #buddypress #item-body > p:first-child {
 	margin-top: 1.5em;
 }
@@ -98,6 +102,7 @@
 
 .bp-user #buddypress #item-header {
 	padding: 0;
+	margin-right: 10px;
 }
 
 #buddypress #item-header .user-nicename,
@@ -118,9 +123,9 @@
 }
 
 @media screen and (min-width: 48em) {
-	.bp-user #buddypress #item-header-content {
-		margin: 0;
+	.bp-user #buddypress #item-header #item-header-content {
 		width: 74%;
+		margin: 0 0 1.5em;
 	}
 }
 
