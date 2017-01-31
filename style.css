@@ -14,7 +14,9 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Typography
-2.0 Templates
+2.0 Forms
+3.0 Templates
+    3.1 Template: Above The Fold
 9.0 Plugins
 --------------------------------------------------------------*/
 
@@ -55,11 +57,26 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 /*--------------------------------------------------------------
-2.0 Templates
+2.0 Forms
+--------------------------------------------------------------*/
+
+label {
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+3.0 Templates
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-2.1 Templates: Above The Fold
+3.1 Template: Above The Fold
 --------------------------------------------------------------*/
 
 @media screen and (max-width: 48em) {
