@@ -99,27 +99,6 @@ function paco2017_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'paco2017_enqueue_scripts', 8 );
 
 /**
- * Return whether to show the admin bar
- *
- * @since 1.0.0
- *
- * @uses is_user_vgsr()
- * 
- * @param bool $show Whether to show the admin bar
- * @return bool Whether to show the admin bar
- */
-function paco2017_show_admin_bar( $show ) {
-
-	// Hide admin bar for non-vgsr users
-	if ( $show && function_exists( 'vgsr' ) && ! is_user_vgsr() ) {
-		$show = false;
-	}
-
-	return $show;
-}
-add_filter( 'show_admin_bar', 'paco2017_show_admin_bar' );
-
-/**
  * Register widgets
  *
  * @since 1.1.0
