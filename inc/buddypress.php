@@ -83,6 +83,40 @@ function paco2017_bp_page_content_header() {
 
 		<?php endif; ?>
 
+		<!-- from members/index.php -->
+		<div class="item-list-tabs" id="subnav" aria-label="<?php esc_attr_e( 'Members directory secondary navigation', 'buddypress' ); ?>" role="navigation">
+			<ul>
+				<?php
+
+				/**
+				 * Fires inside the members directory member sub-types.
+				 *
+				 * @since 1.5.0
+				 */
+				do_action( 'bp_members_directory_member_sub_types' ); ?>
+
+				<li id="members-order-select" class="last filter">
+					<label for="members-order-by"><?php _e( 'Order By:', 'buddypress' ); ?></label>
+					<select id="members-order-by">
+						<?php if ( bp_is_active( 'xprofile' ) ) : ?>
+							<option value="alphabetical"><?php _e( 'Alphabetical', 'buddypress' ); ?></option>
+						<?php endif; ?>
+
+						<option value="active"><?php _e( 'Last Active', 'buddypress' ); ?></option>
+
+						<?php
+
+						/**
+						 * Fires inside the members directory member order options.
+						 *
+						 * @since 1.2.0
+						 */
+						do_action( 'bp_members_directory_order_options' ); ?>
+					</select>
+				</li>
+			</ul>
+		</div>
+
 	<?php endif;
 
 	// Wrap logic in #buddypress to force use the styling logic

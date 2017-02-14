@@ -40,6 +40,22 @@
 2.0 Members
 --------------------------------------------------------------*/
 
+.members #buddypress div.item-list-tabs:not(#subnav) {
+	margin-bottom: 1.5em;
+}
+
+.members #buddypress div.item-list-tabs#subnav {
+	margin-top: 1.5em;
+}
+
+.members #buddypress div.item-list-tabs#subnav li.last {
+	text-align: left;
+}
+
+.members #buddypress div.item-list-tabs .hidden {
+	display: none;
+}
+
 #buddypress div.pagination .pag-count,
 #buddypress div.pagination .pagination-links {
 	margin: 0;
