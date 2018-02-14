@@ -3,7 +3,7 @@ Contributors: offereins
 Tags: vgsr, paascongres, paco, conference
 Requires at least: WP 4.7, BP 2.7
 Tested up to: WP 4.9, BP 2.9
-Version: 1.2.0
+Version: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
