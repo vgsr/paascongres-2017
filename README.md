@@ -1,12 +1,14 @@
 # Paascongres 2017 #
 
-WordPress child theme for the Paascongres 2017 event
+WordPress theme for the Paascongres 2017 event site
 
 ## Description ##
 
 > This WordPress theme requires at least the Twenty Seventeen theme, [WordPress](https://wordpress.org) 4.7 and [BuddyPress](https://buddypress.org) 2.7.
 
-Builds on the Twenty Seventeen and extends it with:
+Builds on the Twenty Seventeen theme and extends it with:
+
+* Dedicated login widget
 * Custom template Above The Fold, consisting of only a fullscreen header image and navigation menu
 * Custom BuddyPress templating for
 	* the single member item header
