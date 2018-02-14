@@ -109,7 +109,9 @@ function paco2017_register_widgets() {
 	require_once( get_stylesheet_directory() . '/widgets/class-paco2017-login-widget.php' );
 
 	// Register widgets
-	register_widget( 'PaCo2017_Login_Widget' );
+	if ( class_exists(( 'PaCo2017_Login_Widget' ) ) ) {
+		register_widget( 'PaCo2017_Login_Widget' );
+	}
 }
 add_action( 'widgets_init', 'paco2017_register_widgets' );
 
